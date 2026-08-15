@@ -47,7 +47,7 @@ def fetch_sector_data():
                 try:
                     logger.info(f"  Downloading {stock}...")
                     # Try to fetch data
-                    hist = yf.download(stock, period='5d', progress=False, quiet=True)
+                    hist = yf.download(stock, period='5d', progress=False)
                     
                     if hist is None or len(hist) == 0:
                         logger.warning(f"  No data for {stock}")
